@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 420" preserveAspectRatio="xMidYMid slice">
+<defs><pattern id="d" width="28" height="28" patternUnits="userSpaceOnUse"><circle cx="2" cy="2" r="1.6" fill="#fff" opacity=".07"/></pattern></defs>
+<rect width="1600" height="420" fill="#111"/><rect width="1600" height="420" fill="url(#d)"/>
+<polygon points="1160,0 1600,0 1600,420 980,420" fill="#FFC928"/>
+<g transform="translate(1380 210) scale(.8) translate(-200 -200)"><defs><clipPath id="bc"><circle cx="200" cy="200" r="112"/></clipPath></defs>
+<circle cx="200" cy="200" r="115" fill="#E8742A"/>
+<g clip-path="url(#bc)" stroke="#111" stroke-width="5" fill="none">
+<path d="M200 80V320M80 200H320"/><path d="M115 95Q175 200 115 305M285 95Q225 200 285 305"/></g>
+<circle cx="200" cy="200" r="115" fill="none" stroke="#111" stroke-width="6"/></g>
+<g transform="translate(1120 230) scale(.62) translate(-200 -200)"><defs><clipPath id="fc"><circle cx="200" cy="200" r="112"/></clipPath></defs><circle cx="200" cy="200" r="115" fill="#fff" stroke="#111" stroke-width="6"/><polygon points="200.0,162.0 236.1,188.3 222.3,230.7 177.7,230.7 163.9,188.3" fill="#111"/><g clip-path="url(#fc)"><line x1="200.0" y1="162.0" x2="200.0" y2="122.0" stroke="#111" stroke-width="4"/><polygon points="200.0,128.0 162.0,100.4 176.5,55.6 223.5,55.6 238.0,100.4" fill="#111"/><line x1="236.1" y1="188.3" x2="274.2" y2="175.9" stroke="#111" stroke-width="4"/><polygon points="268.5,177.8 283.0,133.0 330.0,133.0 344.6,177.8 306.5,205.4" fill="#111"/><line x1="222.3" y1="230.7" x2="245.8" y2="263.1" stroke="#111" stroke-width="4"/><polygon points="242.3,258.2 289.3,258.2 303.9,303.0 265.8,330.6 227.8,303.0" fill="#111"/><line x1="177.7" y1="230.7" x2="154.2" y2="263.1" stroke="#111" stroke-width="4"/><polygon points="157.7,258.2 172.2,303.0 134.2,330.6 96.1,303.0 110.7,258.2" fill="#111"/><line x1="163.9" y1="188.3" x2="125.8" y2="175.9" stroke="#111" stroke-width="4"/><polygon points="131.5,177.8 93.5,205.4 55.4,177.8 70.0,133.0 117.0,133.0" fill="#111"/></g></g></svg>

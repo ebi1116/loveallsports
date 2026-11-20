@@ -1,0 +1,4 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1400 520" preserveAspectRatio="xMidYMid slice">
+<rect width="1400" height="520" fill="#111"/>
+<g fill="#FFC928"><polygon points="900,0 1000,0 760,520 660,520"/><polygon points="1040,0 1400,0 1400,520 800,520" opacity=".95"/></g>
+<g stroke="#111" stroke-width="3" fill="none" opacity=".25"><circle cx="1200" cy="260" r="180"/><circle cx="1200" cy="260" r="120"/></g></svg>

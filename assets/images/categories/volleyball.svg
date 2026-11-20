@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 750" width="600" height="750">
+<defs><linearGradient id="g" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#262626"/><stop offset="1" stop-color="#0c0c0c"/></linearGradient></defs>
+<rect width="600" height="750" fill="url(#g)"/>
+<polygon points="600,0 600,330 150,750 330,750 600,520 600,750" fill="#FFC928" opacity="0"/>
+<polygon points="360,0 600,0 600,420" fill="#FFC928" opacity=".95"/>
+<circle cx="300" cy="320" r="200" fill="none" stroke="#FFC928" stroke-width="3" opacity=".55"/>
+<circle cx="300" cy="320" r="160" fill="#000" opacity=".35"/>
+<g transform="translate(300 320) scale(1.15) translate(-200 -200)"><defs><clipPath id="vc"><circle cx="200" cy="200" r="112"/></clipPath></defs>
+<circle cx="200" cy="200" r="115" fill="#fff"/>
+<g clip-path="url(#vc)" fill="none">
+<path d="M80 125Q200 215 320 120" stroke="#FFC928" stroke-width="40"/>
+<path d="M85 300Q190 190 320 290" stroke="#2F6DB5" stroke-width="40"/>
+<path d="M205 70Q130 200 210 335" stroke="#FFC928" stroke-width="40"/>
+<g stroke="#111" stroke-width="3"><path d="M80 105Q200 195 320 100M80 145Q200 235 320 140"/>
+<path d="M85 280Q190 170 320 270M85 320Q190 210 320 310"/></g></g>
+<circle cx="200" cy="200" r="115" fill="none" stroke="#111" stroke-width="6"/></g></svg>

@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" width="800" height="800">
+<defs><linearGradient id="g" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#FAFAFA"/><stop offset="1" stop-color="#E9E9E9"/></linearGradient></defs>
+<rect width="400" height="400" fill="url(#g)"/><circle cx="200" cy="200" r="158" fill="#FFC928" opacity=".18"/>
+<path d="M0 372L400 300V400H0z" fill="#111" opacity=".05"/>
+<ellipse cx="200" cy="352" rx="110" ry="9" fill="#000" opacity=".12"/>
+<g transform="translate(200 188) scale(.94) translate(-200 -200)"><path d="M55 270V195Q55 165 90 161L150 155Q200 205 260 220L332 215Q352 222 352 248V272Z" fill="#FFC928" stroke="#111" stroke-width="4" stroke-linejoin="round"/>
+<path d="M150 155Q180 185 215 193M180 173l22 -12M200 187l22 -12M220 199l22 -12" stroke="#111" stroke-width="5" fill="none" stroke-linecap="round"/>
+<path d="M55 270h300v20q0 12-12 12H67q-12 0-12-12z" fill="#111"/>
+<path d="M100 302v14M150 302v14M250 302v14M300 302v14" stroke="#111" stroke-width="10" stroke-linecap="round"/>
+<path d="M75 255Q150 225 210 245T340 250" stroke="#fff" stroke-width="6" fill="none" opacity=".85"/></g></svg>

@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 750" width="600" height="750">
+<defs><linearGradient id="g" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#262626"/><stop offset="1" stop-color="#0c0c0c"/></linearGradient></defs>
+<rect width="600" height="750" fill="url(#g)"/>
+<polygon points="600,0 600,330 150,750 330,750 600,520 600,750" fill="#FFC928" opacity="0"/>
+<polygon points="360,0 600,0 600,420" fill="#FFC928" opacity=".95"/>
+<circle cx="300" cy="320" r="200" fill="none" stroke="#FFC928" stroke-width="3" opacity=".55"/>
+<circle cx="300" cy="320" r="160" fill="#000" opacity=".35"/>
+<g transform="translate(300 320) scale(1.15) translate(-200 -200)"><rect x="168" y="62" width="64" height="44" rx="10" fill="#111"/><rect x="178" y="48" width="44" height="18" rx="6" fill="#111"/>
+<path d="M170 106h60l22 28v190q0 22-22 22h-60q-22 0-22-22V134z" fill="#FFC928"/>
+<rect x="148" y="190" width="104" height="70" fill="#111"/><path d="M148 214h104M148 238h104" stroke="#FFC928" stroke-width="4"/>
+<path d="M165 135v170" stroke="#fff" stroke-width="8" stroke-linecap="round" opacity=".5"/></g></svg>

@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" width="800" height="800">
+<defs><linearGradient id="g" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#FAFAFA"/><stop offset="1" stop-color="#E9E9E9"/></linearGradient></defs>
+<rect width="400" height="400" fill="url(#g)"/><circle cx="200" cy="200" r="158" fill="#FFC928" opacity=".18"/>
+<path d="M0 372L400 300V400H0z" fill="#111" opacity=".05"/>
+<ellipse cx="200" cy="352" rx="110" ry="9" fill="#000" opacity=".12"/>
+<g transform="translate(200 188) scale(.94) translate(-200 -200)"><g transform="rotate(-8 200 200)"><rect x="128" y="95" width="32" height="115" rx="14" fill="#2F6DB5"/><rect x="163" y="75" width="32" height="135" rx="14" fill="#2F6DB5"/><rect x="198" y="85" width="32" height="125" rx="14" fill="#2F6DB5"/><rect x="233" y="105" width="32" height="105" rx="14" fill="#2F6DB5"/><rect x="125" y="170" width="145" height="135" rx="34" fill="#2F6DB5"/><rect x="90" y="215" width="32" height="85" rx="15" fill="#2F6DB5" transform="rotate(-30 106 257)"/><path d="M150 200v40M185 200v40M220 200v40" stroke="#000" stroke-width="3" opacity=".2"/><rect x="135" y="298" width="125" height="48" rx="10" fill="#111"/><rect x="135" y="316" width="125" height="10" fill="#FFC928"/></g></g></svg>
