@@ -11,6 +11,40 @@
   .pc-actions .btn { font-size: .78rem; padding: 9px 8px; }
 }
 
+/* Home sport cards scroll manually in one horizontal row */
+#categories .cat-grid {
+  display: flex;
+  gap: 18px;
+  overflow-x: auto;
+  padding: 4px 20px 18px;
+  margin: 0 -20px;
+  scroll-snap-type: x mandatory;
+  scrollbar-width: thin;
+  -webkit-overflow-scrolling: touch;
+}
+#categories .cat-card {
+  flex: 0 0 min(75vw, 280px);
+  scroll-snap-align: start;
+}
+#offers #newGrid {
+  display: flex;
+  gap: 18px;
+  overflow-x: auto;
+  padding: 4px 20px 18px;
+  margin: 0 -20px;
+  scroll-snap-type: x mandatory;
+  scrollbar-width: thin;
+  -webkit-overflow-scrolling: touch;
+}
+#offers #newGrid .product-card {
+  flex: 0 0 min(75vw, 280px);
+  scroll-snap-align: start;
+}
+@media (min-width: 768px) {
+  #categories .cat-card,
+  #offers #newGrid .product-card { flex-basis: 250px; }
+}
+
 /* Compact footer columns on phones */
 @media (max-width: 599px) {
   .footer-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 28px 20px; }

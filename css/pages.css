@@ -16,11 +16,13 @@
 @keyframes fadeUp { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: none; } }
 @keyframes heroZoom { to { transform: scale(1); } }
 
-.ticker { background: var(--yellow); color: var(--black); overflow: hidden; border-block: 3px solid var(--black); }
-.ticker-track { display: flex; width: max-content; animation: ticker 32s linear infinite; }
+.ticker { background: var(--yellow); color: var(--black); overflow-x: auto; overflow-y: hidden; border-block: 3px solid var(--black); scrollbar-width: thin; -webkit-overflow-scrolling: touch; scroll-behavior: smooth; }
+.ticker::-webkit-scrollbar { height: 6px; }
+.ticker::-webkit-scrollbar-thumb { background: var(--black); border-radius: 999px; }
+.ticker:focus-visible { outline-color: var(--black); outline-offset: -4px; }
+.ticker-track { display: flex; width: max-content; }
 .ticker-track span { padding: 12px 28px; font-weight: 800; font-style: italic; text-transform: uppercase; font-size: .95rem; white-space: nowrap; }
 .ticker-track span::after { content: "/"; margin-left: 56px; opacity: .45; }
-@keyframes ticker { to { transform: translateX(-50%); } }
 
 /* ---------- Category cards ---------- */
 .cat-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 14px; }

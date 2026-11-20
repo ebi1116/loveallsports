@@ -186,10 +186,10 @@ p { margin: 0 0 1em; }
 .js .reveal.in { opacity: 1; transform: none; }
 
 /* Centered two-second logo intro before showing the page */
-.js body::before,
-.js body::after { content: ""; position: fixed; pointer-events: none; }
-.js body::before { inset: 0; z-index: 9998; background: #070b0b; animation: intro-screen 2s ease forwards; }
-.js body::after {
+.js.intro body::before,
+.js.intro body::after { content: ""; position: fixed; pointer-events: none; }
+.js.intro body::before { inset: 0; z-index: 9998; background: #070b0b; animation: intro-screen 2s ease forwards; }
+.js.intro body::after {
   z-index: 9999;
   top: 50%;
   left: 50%;
@@ -213,5 +213,5 @@ p { margin: 0 0 1em; }
   html { scroll-behavior: auto; }
   *, *::before, *::after { animation-duration: .01ms !important; transition-duration: .01ms !important; }
   .js .reveal { opacity: 1; transform: none; }
-  .js body::before, .js body::after { display: none; }
+  .js.intro body::before, .js.intro body::after { display: none; }
 }
