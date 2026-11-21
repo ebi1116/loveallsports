@@ -108,9 +108,11 @@ p { margin: 0 0 1em; }
 .veerfit-popup { position: relative; width: min(560px, 100%); max-height: min(90vh, 900px); overflow-y: auto; padding: clamp(18px, 4vw, 30px); border-radius: 22px; background: #050505; color: var(--black); box-shadow: 0 24px 80px rgba(0, 0, 0, .35); }
 .veerfit-popup-close { position: absolute; top: 14px; right: 14px; display: grid; place-items: center; width: 42px; height: 42px; border: 1px solid var(--line); border-radius: 50%; background: var(--white); color: var(--black); font-size: 1.1rem; transition: background .2s, color .2s; }
 .veerfit-popup-close:hover { background: var(--black); color: var(--white); }
-.veerfit-popup-logo { display: block; width: 100%; height: auto; border-radius: 8px; }
+.veerfit-popup-logo { display: block; width: min(100%, 420px); height: auto; margin: 0 auto; border-radius: 8px; animation: veerfitLogoEnter .7s cubic-bezier(.2,.75,.25,1) both; }
 .veerfit-popup-actions { display: flex; justify-content: center; margin-top: 16px; }
 .veerfit-popup-close:focus-visible, .veerfit-popup-actions a:focus-visible { outline: 3px solid var(--yellow); outline-offset: 3px; }
+@keyframes veerfitLogoEnter { from { opacity: 0; transform: scale(.88); } to { opacity: 1; transform: scale(1); } }
+@media (prefers-reduced-motion: reduce) { .veerfit-popup-logo { animation: none; } }
 .stars { color: var(--yellow-dark); font-size: .75rem; display: flex; gap: 2px; align-items: center; }
 .stars small { color: var(--muted); margin-left: 6px; font-size: .74rem; }
 .price { display: flex; align-items: baseline; gap: 8px; flex-wrap: wrap; margin-top: auto; padding-top: 4px; }
@@ -208,7 +210,7 @@ p { margin: 0 0 1em; }
   pointer-events: none;
   animation: intro-screen-out .55s ease 3.2s forwards;
 }
-.intro-canvas { position: relative; width: min(60vw, 120vh); aspect-ratio: 2 / 1; overflow: hidden; background: #000; }
+.intro-canvas { position: relative; width: min(52vw, 920px, 120vh); aspect-ratio: 2 / 1; overflow: hidden; background: #000; }
 .intro-piece {
   position: absolute;
   inset: 0;
@@ -234,5 +236,5 @@ p { margin: 0 0 1em; }
 }
 
 @media (max-width: 600px) {
-  .intro-canvas { width: 55vw; }
+  .intro-canvas { width: min(88vw, 520px); }
 }
