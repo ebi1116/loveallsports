@@ -93,8 +93,8 @@ p { margin: 0 0 1em; }
 .product-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 14px; }
 .product-card { background: var(--white); border-radius: var(--radius); overflow: hidden; border: 1px solid var(--line); display: flex; flex-direction: column; transition: transform .35s var(--ease), box-shadow .35s var(--ease), border-color .35s; }
 .product-card:hover { transform: translateY(-6px); box-shadow: var(--shadow-lg); border-color: var(--yellow); }
-.pc-media { position: relative; background: var(--gray); aspect-ratio: 1 / 1; overflow: hidden; cursor: pointer; }
-.pc-media img { width: 100%; height: 100%; object-fit: cover; transition: transform .5s var(--ease); }
+.pc-media { position: relative; background: #fff; aspect-ratio: 1 / 1; overflow: hidden; cursor: pointer; }
+.pc-media img { width: 100%; height: 100%; object-fit: contain; transition: transform .5s var(--ease); }
 .product-card:hover .pc-media img { transform: scale(1.07); }
 .badge { position: absolute; top: 10px; left: 10px; background: var(--black); color: var(--yellow); font-size: .72rem; font-weight: 700; padding: 4px 10px; border-radius: 999px; z-index: 2; }
 .badge.new { left: auto; right: 10px; background: var(--yellow); color: var(--black); }
@@ -185,33 +185,44 @@ p { margin: 0 0 1em; }
 .js .reveal { opacity: 0; transform: translateY(26px); transition: opacity .7s var(--ease), transform .7s var(--ease); }
 .js .reveal.in { opacity: 1; transform: none; }
 
-/* Centered two-second logo intro before showing the page */
-.js.intro body::before,
-.js.intro body::after { content: ""; position: fixed; pointer-events: none; }
-.js.intro body::before { inset: 0; z-index: 9998; background: #070b0b; animation: intro-screen 2s ease forwards; }
-.js.intro body::after {
+/* Opening intro reveals the supplied artwork piece by piece. */
+.intro-screen { display: none; }
+.js.intro .intro-screen {
+  position: fixed;
+  inset: 0;
   z-index: 9999;
-  top: 50%;
-  left: 50%;
-  width: 156px;
-  height: 118px;
-  background: url("../assets/images/logo/logo-mark.png") center / contain no-repeat;
-  animation: intro-mark 2s cubic-bezier(.2, .7, .2, 1) forwards;
+  display: grid;
+  place-items: center;
+  overflow: hidden;
+  background: #000;
+  pointer-events: none;
+  animation: intro-screen-out .55s ease 3.2s forwards;
 }
-@keyframes intro-screen {
-  0%, 82% { opacity: 1; visibility: visible; }
-  100% { opacity: 0; visibility: hidden; }
+.intro-canvas { position: relative; width: min(60vw, 120vh); aspect-ratio: 2 / 1; overflow: hidden; background: #000; }
+.intro-piece {
+  position: absolute;
+  inset: 0;
+  display: block;
+  background: url("../assets/images/banners/opening-badminton-players.png") center / 100% 100% no-repeat;
+  opacity: 0;
 }
-@keyframes intro-mark {
-  0% { opacity: 0; transform: translate(-50%, -50%) scale(.62) rotate(-10deg); }
-  24% { opacity: 1; transform: translate(-50%, -50%) scale(1.08) rotate(2deg); }
-  40%, 78% { opacity: 1; transform: translate(-50%, -50%) scale(1) rotate(0); }
-  100% { opacity: 0; transform: translate(-50%, -50%) scale(1.06) rotate(0); }
-}
+.intro-player-left { clip-path: inset(8% 82% 34% 3%); animation: intro-from-left .55s cubic-bezier(.2, .7, .2, 1) .15s forwards; }
+.intro-player-right { clip-path: polygon(73% 14%, 97% 14%, 97% 67%, 80% 67%, 80% 30%, 76% 30%, 76% 27%, 73% 27%); animation: intro-right-reveal .55s ease .8s forwards; }
+.intro-wordmark { clip-path: inset(18% 25% 12% 17%); animation: intro-wordmark .65s cubic-bezier(.2, .7, .2, 1) 1.45s forwards; }
+.intro-top-mark { clip-path: inset(4% 48% 80% 42%); animation: intro-from-top .55s cubic-bezier(.2, .7, .2, 1) 2.2s forwards; }
+@keyframes intro-screen-out { to { opacity: 0; visibility: hidden; } }
+@keyframes intro-from-left { to { opacity: 1; transform: translateX(0); } from { transform: translateX(-32px); } }
+@keyframes intro-right-reveal { from { opacity: 0; } to { opacity: 1; } }
+@keyframes intro-wordmark { from { opacity: 0; transform: scale(.94); } to { opacity: 1; transform: scale(1); } }
+@keyframes intro-from-top { from { opacity: 0; transform: translateY(-24px); } to { opacity: 1; transform: translateY(0); } }
 
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
   *, *::before, *::after { animation-duration: .01ms !important; transition-duration: .01ms !important; }
   .js .reveal { opacity: 1; transform: none; }
-  .js.intro body::before, .js.intro body::after { display: none; }
+  .js.intro .intro-screen { display: none; }
+}
+
+@media (max-width: 600px) {
+  .intro-canvas { width: 75vw; }
 }

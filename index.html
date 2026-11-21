@@ -4,10 +4,10 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>LOVE ALL SPORTS | Sports Accessories &amp; Sports Wear</title>
-<meta name="description" content="Discover cricket, football, volleyball, badminton, basketball, tennis and fitness at LOVE ALL SPORTS. One passion. Every sport.">
+<meta name="description" content="Shop badminton items, sports wear, indoor and outdoor shoes, custom team sublimation jerseys, football, volleyball, cricket and general accessories at LOVE ALL SPORTS.">
 <meta name="theme-color" content="#111111">
 <meta property="og:title" content="LOVE ALL SPORTS | Sports Accessories &amp; Sports Wear">
-<meta property="og:description" content="Discover cricket, football, volleyball, badminton, basketball, tennis and fitness at LOVE ALL SPORTS. One passion. Every sport.">
+<meta property="og:description" content="Shop badminton items, sports wear, indoor and outdoor shoes, custom team sublimation jerseys, football, volleyball, cricket and general accessories at LOVE ALL SPORTS.">
 <meta property="og:type" content="website">
 <link rel="icon" type="image/png" href="assets/icons/favicon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -20,14 +20,22 @@
 <script>
 document.documentElement.classList.add('js');
 try {
-  if (!sessionStorage.getItem('lasIntroSeen')) {
+  if (!sessionStorage.getItem('lasIntroSeenV7')) {
     document.documentElement.classList.add('intro');
-    sessionStorage.setItem('lasIntroSeen', '1');
+    sessionStorage.setItem('lasIntroSeenV7', '1');
   }
 } catch (error) {}
 </script>
 </head>
 <body data-root="" data-page="home">
+<div class="intro-screen" aria-hidden="true">
+  <div class="intro-canvas">
+    <span class="intro-piece intro-player-left"></span>
+    <span class="intro-piece intro-player-right"></span>
+    <span class="intro-piece intro-wordmark"></span>
+    <span class="intro-piece intro-top-mark"></span>
+  </div>
+</div>
 <a class="skip-link" href="#main">Skip to content</a>
 <header class="site-header" id="header">
   <div class="container nav-wrap">
@@ -48,8 +56,9 @@ try {
 </header>
 <main id="main">
 <section class="hero" id="home" aria-label="Welcome">
-  <div class="hero-bg" role="img" aria-label="Football, cricket bat, racket and basketball on a black and yellow background"></div>
+  <div class="hero-bg" role="img" aria-label="Premium badminton gear with rackets, shuttlecocks and a sports bag"></div>
   <div class="container hero-inner">
+    <p class="hero-eyebrow">Premium badminton gear</p>
     <h1 class="hero-title"><span>One passion.</span><span>Every sport.</span></h1>
     <p class="hero-text">Everything you need to play, perform and win. Discover sports accessories and sports wear for every game.</p>
     <div class="hero-cta">
@@ -58,7 +67,7 @@ try {
     </div>
   </div>
 </section>
-<div class="ticker" role="region" aria-label="Sports categories, scroll horizontally" tabindex="0"><div class="ticker-track"><span>Cricket</span><span>Football</span><span>Volleyball</span><span>Badminton</span><span>Basketball</span><span>Tennis</span><span>Fitness &amp; Gym</span><span>Sports Accessories</span><span>Sports Wear</span></div></div>
+<div class="ticker" role="region" aria-label="Sports categories, scroll horizontally" tabindex="0"><div class="ticker-track"><span>Badminton Items</span><span>Sports Wear: Jerseys, Track Pants &amp; Shorts</span><span>Indoor &amp; Outdoor Shoes</span><span>Team Sublimation Jerseys</span><span>Football &amp; Volleyball</span><span>Cricket</span><span>General Accessories</span></div></div>
 
 <section class="section" id="categories">
   <div class="container">
@@ -90,14 +99,14 @@ try {
 
 <section class="section section-gray" id="offers">
   <div class="container">
-    <div class="offer-banner reveal">
-      <div>
-        <h2>Made for every game<br><em>One passion. Every sport.</em></h2>
-        <p style="margin-top:14px">Explore sports accessories, activewear and essentials for the games you love.</p>
-        <ul class="offer-list"><li><i class="fa-solid fa-check"></i>Accessories for several sports</li><li><i class="fa-solid fa-check"></i>Sports wear for training and play</li><li><i class="fa-solid fa-check"></i>Friendly support when choosing your gear</li></ul>
-        <a class="btn btn-primary" style="margin-top:22px" href="pages/products.html">Explore Sports</a>
+    <div class="feature-about split" role="region" aria-label="About LOVE ALL SPORTS">
+      <div class="split-media"><img src="assets/images/banners/sports-gear-golden-studio.png" alt="Cricket bat, badminton racket, volleyball, sports shoes, bag and balls in golden studio light" width="1670" height="938"></div>
+      <div class="split-text">
+        <h2 class="section-title">Made for people who love sports</h2>
+        <p>LOVE ALL SPORTS is a destination for players, athletes and fitness lovers who want sports accessories and wear in one welcoming place. Whatever you play, you will find something here that suits you.</p>
+        <ul class="check-list"><li><i class="fa-solid fa-check"></i>Seven shop sections for your game</li><li><i class="fa-solid fa-check"></i>Gear for beginners and regular players</li><li><i class="fa-solid fa-check"></i>Simple ordering and friendly support</li></ul>
+        <a class="btn btn-dark" href="pages/about.html">Read More</a>
       </div>
-      <div class="offer-discount" aria-hidden="true"><strong>9</strong><span>categories</span></div>
     </div>
 
     <div class="subhead"><h3>Recently added</h3><a class="link-arrow" href="pages/products.html">Explore the range <i class="fa-solid fa-arrow-right"></i></a></div>
@@ -105,18 +114,6 @@ try {
 
     <div class="subhead"><h3>Popular picks</h3><a class="link-arrow" href="pages/products.html">Explore the range <i class="fa-solid fa-arrow-right"></i></a></div>
     <div class="product-grid cols-4" id="bestGrid"></div>
-  </div>
-</section>
-
-<section class="section" id="about-preview">
-  <div class="container split">
-    <div class="split-media reveal"><img src="assets/images/banners/about.svg" alt="Volleyball, cricket bat and badminton racket illustration" loading="lazy" width="800" height="840"></div>
-    <div class="split-text reveal">
-      <h2 class="section-title">Made for people who love sports</h2>
-      <p>LOVE ALL SPORTS is a destination for players, athletes and fitness lovers who want sports accessories and wear in one welcoming place. Whatever you play, you will find something here that suits you.</p>
-      <ul class="check-list"><li><i class="fa-solid fa-check"></i>Nine sport, fitness and wear categories</li><li><i class="fa-solid fa-check"></i>Gear for beginners and regular players</li><li><i class="fa-solid fa-check"></i>Simple ordering and friendly support</li></ul>
-      <a class="btn btn-dark" href="pages/about.html">Read More</a>
-    </div>
   </div>
 </section>
 
@@ -155,7 +152,7 @@ try {
     </div>
     <div>
       <h4>Sports</h4>
-      <ul class="footer-links"><li><a href="pages/products.html?cat=cricket">Cricket Accessories</a></li><li><a href="pages/products.html?cat=football">Football Accessories</a></li><li><a href="pages/products.html?cat=volleyball">Volleyball Accessories</a></li><li><a href="pages/products.html?cat=badminton">Badminton Accessories</a></li><li><a href="pages/products.html?cat=basketball">Basketball Accessories</a></li><li><a href="pages/products.html?cat=tennis">Tennis Accessories</a></li><li><a href="pages/products.html?cat=fitness">Fitness & Gym</a></li><li><a href="pages/products.html?cat=accessories">Sports Accessories</a></li><li><a href="pages/products.html?cat=sports-wear">Sports Wear</a></li></ul>
+      <ul class="footer-links"><li><a href="pages/products.html?cat=badminton">Badminton Items</a></li><li><a href="pages/products.html?cat=sports-wear">Sports Wear</a></li><li><a href="pages/products.html?cat=shoes">Indoor &amp; Outdoor Shoes</a></li><li><a href="pages/products.html?cat=team-jerseys">Team Sublimation Jerseys</a></li><li><a href="pages/products.html?cat=football-volleyball">Football &amp; Volleyball</a></li><li><a href="pages/products.html?cat=cricket">Cricket</a></li><li><a href="pages/products.html?cat=accessories">General Accessories</a></li></ul>
     </div>
     <div>
       <h4>Contact</h4>

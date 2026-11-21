@@ -4,9 +4,11 @@
 
 /* ---------- Hero ---------- */
 .hero { position: relative; min-height: calc(100vh - var(--header-h)); min-height: calc(100svh - var(--header-h)); display: flex; align-items: center; background: var(--black); color: var(--white); overflow: hidden; }
-.hero-bg { position: absolute; inset: 0; background: url("../assets/images/banners/hero.svg") 70% center / cover no-repeat; transform: scale(1.06); animation: heroZoom 2.2s var(--ease) forwards; }
-.hero::before { content: ""; position: absolute; inset: 0; z-index: 1; background: linear-gradient(90deg, rgba(17, 17, 17, .94) 0%, rgba(17, 17, 17, .78) 55%, rgba(17, 17, 17, .35) 100%); }
+.hero-bg { position: absolute; inset: 0; background: url("../assets/images/banners/dramatic-yellow-badminton-gear.png") 70% center / cover no-repeat; transform: scale(1.06); animation: heroZoom 2.2s var(--ease) forwards; }
+.hero::before { content: ""; position: absolute; inset: 0; z-index: 1; background: linear-gradient(90deg, rgba(8, 11, 14, .99) 0%, rgba(8, 11, 14, .99) 48%, rgba(8, 11, 14, .96) 58%, rgba(8, 11, 14, .42) 82%, rgba(8, 11, 14, .24) 100%); }
 .hero-inner { position: relative; z-index: 2; padding-top: 56px; padding-bottom: 96px; }
+.hero-eyebrow { display: flex; align-items: center; gap: 16px; width: fit-content; margin: 0 0 22px; color: var(--white); font-size: .78rem; font-weight: 600; letter-spacing: .28em; text-transform: uppercase; }
+.hero-eyebrow::before, .hero-eyebrow::after { content: ""; width: 42px; height: 2px; background: var(--yellow); }
 .hero-title { font-size: clamp(2.7rem, 11.5vw, 6.4rem); font-weight: 900; font-style: italic; text-transform: uppercase; line-height: .95; letter-spacing: -.02em; margin: 0 0 22px; }
 .hero-title span { display: block; opacity: 0; transform: translateX(-40px) skewX(-6deg); animation: slideIn .8s var(--ease) forwards; }
 .hero-title span:nth-child(2) { color: var(--yellow); animation-delay: .22s; }
@@ -56,6 +58,7 @@
 
 /* ---------- Offers ---------- */
 .offer-banner { position: relative; border-radius: 20px; overflow: hidden; background: var(--black) url("../assets/images/banners/offer.svg") center / cover no-repeat; color: var(--white); padding: 44px 26px; display: grid; gap: 22px; }
+.feature-about { overflow: hidden; border-radius: 20px; background: var(--white); }
 .offer-banner h2 { font-size: clamp(2rem, 7vw, 3.6rem); font-weight: 900; font-style: italic; text-transform: uppercase; margin: 0; line-height: 1; }
 .offer-banner h2 em { font-style: italic; color: var(--yellow); }
 .offer-banner p { max-width: 460px; color: #d6d6d6; margin: 0; }
@@ -73,6 +76,8 @@
 /* ---------- About preview / about page ---------- */
 .split { display: grid; gap: 34px; align-items: center; }
 .split-media { position: relative; border-radius: 20px; overflow: hidden; background: var(--black); }
+.feature-about .split-media { border-radius: 0; }
+.feature-about .split-media img { aspect-ratio: 1670 / 938; object-fit: cover; }
 .split-media img { width: 100%; aspect-ratio: 4 / 4.2; object-fit: cover; }
 .split-media::after { content: ""; position: absolute; right: -40px; bottom: -40px; width: 140px; height: 140px; background: var(--yellow); transform: rotate(45deg); }
 .split-text p { color: #444; }
