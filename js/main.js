@@ -42,6 +42,33 @@ document.addEventListener('DOMContentLoaded', () => {
   const navToggle = document.getElementById('navToggle');
   const nav = document.getElementById('mainNav');
 
+  /* ---------- Veerfit opening product popup ---------- */
+  const veerfitPopup = document.getElementById('veerfitPopup');
+  if (veerfitPopup) {
+    const closeButton = document.getElementById('veerfitPopupClose');
+    const closePopup = () => {
+      veerfitPopup.classList.remove('is-open');
+      veerfitPopup.setAttribute('aria-hidden', 'true');
+      document.body.style.overflow = '';
+    };
+    const openPopup = () => {
+      veerfitPopup.classList.add('is-open');
+      veerfitPopup.setAttribute('aria-hidden', 'false');
+      document.body.style.overflow = 'hidden';
+      closeButton.focus();
+      window.observeReveals && window.observeReveals(veerfitPopup);
+    };
+    closeButton.addEventListener('click', closePopup);
+    veerfitPopup.addEventListener('click', (event) => {
+      if (event.target === veerfitPopup) closePopup();
+    });
+    document.addEventListener('keydown', (event) => {
+      if (event.key === 'Escape' && veerfitPopup.classList.contains('is-open')) closePopup();
+    });
+    const delay = window.matchMedia('(prefers-reduced-motion: reduce)').matches ? 900 : 3900;
+    setTimeout(openPopup, delay);
+  }
+
   /* ---------- Mobile navigation ---------- */
   const setNav = (open) => {
     nav.classList.toggle('open', open);

@@ -20,9 +20,9 @@
 <script>
 document.documentElement.classList.add('js');
 try {
-  if (!sessionStorage.getItem('lasIntroSeenV7')) {
+  if (!sessionStorage.getItem('lasIntroSeenV8')) {
     document.documentElement.classList.add('intro');
-    sessionStorage.setItem('lasIntroSeenV7', '1');
+    sessionStorage.setItem('lasIntroSeenV8', '1');
   }
 } catch (error) {}
 </script>
@@ -67,7 +67,7 @@ try {
     </div>
   </div>
 </section>
-<div class="ticker" role="region" aria-label="Sports categories, scroll horizontally" tabindex="0"><div class="ticker-track"><span>Badminton Items</span><span>Sports Wear: Jerseys, Track Pants &amp; Shorts</span><span>Indoor &amp; Outdoor Shoes</span><span>Team Sublimation Jerseys</span><span>Football &amp; Volleyball</span><span>Cricket</span><span>General Accessories</span></div></div>
+<div class="ticker" role="region" aria-label="Sports categories, scroll horizontally" tabindex="0"><div class="ticker-track"><span>VEERFIT</span><span>Badminton Items</span><span>Sports Wear: Jerseys, Track Pants &amp; Shorts</span><span>Indoor &amp; Outdoor Shoes</span><span>Team Sublimation Jerseys</span><span>Football &amp; Volleyball</span><span>Cricket</span><span>General Accessories</span></div></div>
 
 <section class="section" id="categories">
   <div class="container">
@@ -104,7 +104,7 @@ try {
       <div class="split-text">
         <h2 class="section-title">Made for people who love sports</h2>
         <p>LOVE ALL SPORTS is a destination for players, athletes and fitness lovers who want sports accessories and wear in one welcoming place. Whatever you play, you will find something here that suits you.</p>
-        <ul class="check-list"><li><i class="fa-solid fa-check"></i>Seven shop sections for your game</li><li><i class="fa-solid fa-check"></i>Gear for beginners and regular players</li><li><i class="fa-solid fa-check"></i>Simple ordering and friendly support</li></ul>
+        <ul class="check-list"><li><i class="fa-solid fa-check"></i>Eight shop sections for your game</li><li><i class="fa-solid fa-check"></i>Gear for beginners and regular players</li><li><i class="fa-solid fa-check"></i>Simple ordering and friendly support</li></ul>
         <a class="btn btn-dark" href="pages/about.html">Read More</a>
       </div>
     </div>
@@ -137,6 +137,7 @@ try {
       <div class="socials">
         <a href="#" data-whatsapp aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
         <a href="mailto:loveall.sports03@gmail.com" aria-label="Email love all sports"><i class="fa-solid fa-envelope"></i></a>
+        <a href="https://www.instagram.com/loveallsportscbe/" target="_blank" rel="noopener noreferrer" aria-label="Instagram @loveallsportscbe"><i class="fa-brands fa-instagram"></i></a>
       </div>
     </div>
     <div>
@@ -152,7 +153,7 @@ try {
     </div>
     <div>
       <h4>Sports</h4>
-      <ul class="footer-links"><li><a href="pages/products.html?cat=badminton">Badminton Items</a></li><li><a href="pages/products.html?cat=sports-wear">Sports Wear</a></li><li><a href="pages/products.html?cat=shoes">Indoor &amp; Outdoor Shoes</a></li><li><a href="pages/products.html?cat=team-jerseys">Team Sublimation Jerseys</a></li><li><a href="pages/products.html?cat=football-volleyball">Football &amp; Volleyball</a></li><li><a href="pages/products.html?cat=cricket">Cricket</a></li><li><a href="pages/products.html?cat=accessories">General Accessories</a></li></ul>
+      <ul class="footer-links"><li><a href="pages/products.html?cat=veerfit">VEERFIT</a></li><li><a href="pages/products.html?cat=badminton">Badminton Items</a></li><li><a href="pages/products.html?cat=sports-wear">Sports Wear</a></li><li><a href="pages/products.html?cat=shoes">Indoor &amp; Outdoor Shoes</a></li><li><a href="pages/products.html?cat=team-jerseys">Team Sublimation Jerseys</a></li><li><a href="pages/products.html?cat=football-volleyball">Football &amp; Volleyball</a></li><li><a href="pages/products.html?cat=cricket">Cricket</a></li><li><a href="pages/products.html?cat=accessories">General Accessories</a></li></ul>
     </div>
     <div>
       <h4>Contact</h4>
@@ -160,11 +161,20 @@ try {
         <li><i class="fa-solid fa-location-dot"></i><span>Shop 1, No. 2/4, Palkarar Thottam, Vilankuruchi Road, Cheran Managar, Coimbatore - 641035</span></li>
         <li><i class="fa-brands fa-whatsapp"></i><a href="#" data-whatsapp>+91 99409 53335</a></li>
         <li><i class="fa-solid fa-envelope"></i><a href="#" data-email>loveall.sports03@gmail.com</a></li>
+        <li><i class="fa-regular fa-clock"></i><span>Every day, 9:00 AM–9:00 PM</span></li>
       </ul>
     </div>
   </div>
   <div class="footer-bottom"><div class="container">&copy; <span data-year>2026</span> LOVE ALL SPORTS. All rights reserved.</div></div>
 </footer>
+<div class="veerfit-popup-backdrop" id="veerfitPopup" aria-hidden="true">
+  <section class="veerfit-popup veerfit-logo-popup" role="dialog" aria-modal="true" aria-labelledby="veerfitPopupTitle">
+    <button class="veerfit-popup-close" type="button" id="veerfitPopupClose" aria-label="Close Veerfit products"><i class="fa-solid fa-xmark"></i></button>
+    <h2 class="sr-only" id="veerfitPopupTitle">Veerfit — Be Limitless</h2>
+    <img class="veerfit-popup-logo" src="assets/images/logo/veerfit-popup-logo.png" alt="Veerfit — Be Limitless" width="2048" height="680">
+    <div class="veerfit-popup-actions"><a class="btn btn-primary" href="pages/products.html?cat=veerfit">Explore Products</a></div>
+  </section>
+</div>
 <button class="to-top" id="toTop" aria-label="Back to top"><i class="fa-solid fa-arrow-up"></i></button>
 <script src="js/products.js"></script>
 <script src="js/main.js"></script>

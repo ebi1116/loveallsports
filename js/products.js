@@ -20,6 +20,14 @@ const SITE_CONFIG = {
 
 const CATEGORIES = [
   {
+    "key": "veerfit",
+    "name": "Veerfit",
+    "short": "Veerfit",
+    "icon": "fa-bolt",
+    "blurb": "Performance essentials from the VEERFIT in-house brand.",
+    "image": "images/products/veerfit/veerfit-wristband.jpg"
+  },
+  {
     "key": "badminton",
     "name": "Badminton Items",
     "short": "Badminton Items",
@@ -70,11 +78,11 @@ const CATEGORIES = [
   {
     "key": "accessories",
     "name": "General Accessories",
-    "short": "General Accessories",
+    "short": "Accessories",
     "icon": "fa-box-open",
     "blurb": "Bottles, bags and the small things you always need.",
     "image": "images/products/accessories/badminton-accessories-display.jpg"
-  },
+  }
 ];
 
 const PRODUCTS = [
@@ -319,6 +327,44 @@ const PRODUCTS = [
     "isNew": true,
     "featured": false,
     "added": 24
+  },
+  {
+    "id": "veerfit-arm-sleeves",
+    "name": "Veerfit Arm Sleeves",
+    "brand": "VEERFIT",
+    "category": "veerfit",
+    "image": "images/products/veerfit/veerfit-arm-sleeves.png",
+    "packageImage": "images/products/veerfit/veerfit-arm-sleeves-packaging.jpg",
+    "description": "Lightweight, breathable stretch arm sleeves with UV protection.",
+    "popularity": 82,
+    "isNew": true,
+    "featured": false,
+    "added": 25
+  },
+  {
+    "id": "veerfit-sports-socks",
+    "name": "Veerfit Sports Socks",
+    "brand": "VEERFIT",
+    "category": "veerfit",
+    "image": "images/products/veerfit/veerfit-sports-socks.png",
+    "packageImage": "images/products/veerfit/veerfit-socks-packaging.jpg",
+    "description": "White and black performance socks with a cushioned, ribbed fit.",
+    "popularity": 80,
+    "isNew": true,
+    "featured": false,
+    "added": 26
+  },
+  {
+    "id": "veerfit-wristband",
+    "name": "Veerfit Wristband",
+    "brand": "VEERFIT",
+    "category": "veerfit",
+    "image": "images/products/veerfit/veerfit-wristband.jpg",
+    "description": "Soft black sports wristband for training and play.",
+    "popularity": 78,
+    "isNew": true,
+    "featured": false,
+    "added": 27
   }
 ];
 
@@ -339,9 +385,10 @@ function productCard(p) {
   <div class="pc-media">
     ${p.isNew ? '<span class="badge new">New</span>' : ''}
     <img src="${imgSrc(p)}" alt="${esc(p.name)} - ${esc(catShort(p.category))} product" loading="lazy" width="400" height="400">
+    ${p.packageImage ? `<img class="pc-package" src="${ASSET_ROOT}assets/${p.packageImage}" alt="${esc(p.name)} packaging" loading="lazy" width="120" height="120">` : ''}
   </div>
   <div class="pc-body">
-    <span class="pc-cat">${esc(catShort(p.category))}</span>
+    <span class="pc-cat">${p.brand ? `${esc(p.brand)} · ` : ''}${esc(catShort(p.category))}</span>
     <h3 class="pc-name">${esc(p.name)}</h3>
     <p>${esc(p.description)}</p>
   </div>
@@ -373,13 +420,14 @@ function initHome() {
   if (featured) {
     const tabs = [
       { key: 'top', label: 'Top Picks', test: (p) => p.featured },
+      { key: 'veerfit', label: 'Veerfit', test: (p) => p.category === 'veerfit' },
       { key: 'badminton', label: 'Badminton', test: (p) => p.category === 'badminton' },
       { key: 'sports-wear', label: 'Sports Wear', test: (p) => p.category === 'sports-wear' },
       { key: 'shoes', label: 'Shoes', test: (p) => p.category === 'shoes' },
       { key: 'team-jerseys', label: 'Team Sublimation Jerseys', test: (p) => p.category === 'team-jerseys' },
       { key: 'football-volleyball', label: 'Football & Volleyball', test: (p) => p.category === 'football-volleyball' },
       { key: 'cricket', label: 'Cricket', test: (p) => p.category === 'cricket' },
-      { key: 'accessories', label: 'General Accessories', test: (p) => p.category === 'accessories' },
+      { key: 'accessories', label: 'Accessories', test: (p) => p.category === 'accessories' },
     ];
     const tabsEl = document.getElementById('featuredTabs');
     tabsEl.innerHTML = tabs.map((t, i) => `<button class="tab${i === 0 ? ' active' : ''}" role="tab" aria-selected="${i === 0}" data-tab="${t.key}">${t.label}</button>`).join('');
