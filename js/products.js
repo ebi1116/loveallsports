@@ -443,7 +443,6 @@ function initHome() {
     });
     show('top');
   }
-  renderGrid(document.getElementById('veerfitPopupGrid'), PRODUCTS.filter((p) => p.brand === 'VEERFIT'));
   renderGrid(document.getElementById('newGrid'), PRODUCTS.filter((p) => p.isNew).sort((a, b) => b.added - a.added).slice(0, 4));
   renderGrid(document.getElementById('bestGrid'), [...PRODUCTS].sort((a, b) => b.popularity - a.popularity).slice(0, 4));
 }
